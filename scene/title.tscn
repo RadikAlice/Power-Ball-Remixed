@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvwx0spejm33l"]
+
+[ext_resource type="Script" path="res://scripts/title.gd" id="1_t3nhu"]
+[ext_resource type="AudioStream" uid="uid://dxibeg3wk8aj8" path="res://music/136638_Hippie.mp3" id="1_xroyi"]
+[ext_resource type="Texture2D" uid="uid://rjut2ivegjny" path="res://gfx/Power-Swing-ReMixed-Logo.png" id="3_1gsiw"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_vmka8"]
+
+[node name="title-screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t3nhu")
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_xroyi")
+volume_db = -8.0
+autoplay = true
+
+[node name="VboxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = 187.0
+offset_right = 35.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Start" type="Button" parent="VboxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="Options" type="MenuButton" parent="VboxContainer"]
+layout_mode = 2
+button_group = SubResource("ButtonGroup_vmka8")
+text = "Options"
+
+[node name="PopupMenu" type="PopupMenu" parent="VboxContainer/Options"]
+title = "Sup, options here"
+visible = true
+
+[node name="Credits" type="Button" parent="VboxContainer"]
+layout_mode = 2
+text = "Credits"
+
+[node name="Quit" type="Button" parent="VboxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.5
+offset_right = 200.5
+offset_bottom = 197.0
+grow_horizontal = 2
+
+[node name="logo" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+texture = ExtResource("3_1gsiw")
+
+[connection signal="pressed" from="VboxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VboxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VboxContainer/Quit" to="." method="_on_quit_pressed"]

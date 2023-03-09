@@ -1,0 +1,34 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Power Swing ReMixed"
+config/description="A reinvention of the Flash games Power Ball and Power Swing by D-SuN
+developed in Godot with new features and tweaks inspired by Lethal League"
+run/main_scene="res://scene/title.tscn"
+config/features=PackedStringArray("4.0", "Forward Plus")
+config/icon="res://gfx/icon.png"
+
+[autoload]
+
+Scene_Transition="*res://scene/transition_scene.tscn"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=728
+window/size/resizable=false
+window/size/borderless=true
+mouse_cursor/custom_image="res://gfx/cursor.png"
+
+[editor]
+
+movie_writer/movie_file="E:/Nextcloud/Media Production/Exports/debug.avi"

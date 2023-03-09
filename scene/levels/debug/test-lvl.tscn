@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhkbtvggcpuop"]
+
+[ext_resource type="Script" path="res://scene/levels/debug/test-lvl.gd" id="1_bikyl"]
+[ext_resource type="AudioStream" uid="uid://dw0uv1puv3g6p" path="res://music/105753_Heaven_remix.mp3" id="2_o1hw0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23bic"]
+size = Vector2(41.5687, 5.43095)
+
+[node name="test-lvl" type="Node2D"]
+script = ExtResource("1_bikyl")
+
+[node name="bg" type="ColorRect" parent="."]
+offset_left = -12.0
+offset_top = -10.0
+offset_right = 28.0
+offset_bottom = 30.0
+scale = Vector2(26.1651, 18.7812)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.623529, 0, 0.623529, 1)
+
+[node name="level" type="ColorRect" parent="bg"]
+layout_mode = 0
+offset_top = 35.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Area2D" type="Area2D" parent="bg/level"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bg/level/Area2D"]
+position = Vector2(19.6129, 2.75045)
+shape = SubResource("RectangleShape2D_23bic")
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_o1hw0")
+volume_db = -3.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 540.0
+offset_top = 15.0
+offset_right = 641.0
+offset_bottom = 116.0
+
+[node name="PlayBGM" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play BGM"
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back to title"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[node name="Reset" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Reset"
+
+[connection signal="pressed" from="VBoxContainer/PlayBGM" to="." method="_on_play_bgm_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
