@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhkbtvggcpuop"]
+[gd_scene load_steps=5 format=3 uid="uid://dhkbtvggcpuop"]
 
-[ext_resource type="Script" path="res://scene/levels/debug/test-lvl.gd" id="1_bikyl"]
+[ext_resource type="Script" path="res://scripts/debug-scr.gd" id="1_gflhp"]
+[ext_resource type="Theme" uid="uid://6aycbqsfxlik" path="res://resource/theme_main.tres" id="2_ns8h3"]
 [ext_resource type="AudioStream" uid="uid://dw0uv1puv3g6p" path="res://music/105753_Heaven_remix.mp3" id="2_o1hw0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_23bic"]
 size = Vector2(41.5687, 5.43095)
 
 [node name="test-lvl" type="Node2D"]
-script = ExtResource("1_bikyl")
+script = ExtResource("1_gflhp")
 
 [node name="bg" type="ColorRect" parent="."]
 offset_left = -12.0
@@ -31,19 +32,31 @@ offset_bottom = 40.0
 position = Vector2(19.6129, 2.75045)
 shape = SubResource("RectangleShape2D_23bic")
 
-[node name="bgm" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_o1hw0")
-volume_db = -3.0
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 540.0
-offset_top = 15.0
-offset_right = 641.0
-offset_bottom = 116.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 381.0
+offset_top = 36.0
+offset_right = 658.0
+offset_bottom = 192.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("2_ns8h3")
+alignment = 1
 
-[node name="PlayBGM" type="Button" parent="VBoxContainer"]
+[node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Play BGM"
+
+[node name="Stop" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Stop BGM"
+
+[node name="Change" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Change Track"
 
 [node name="Back" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -57,6 +70,13 @@ text = "Exit"
 layout_mode = 2
 text = "Reset"
 
-[connection signal="pressed" from="VBoxContainer/PlayBGM" to="." method="_on_play_bgm_pressed"]
+[node name="bgm" type="AudioStreamPlayer" parent="VBoxContainer"]
+stream = ExtResource("2_o1hw0")
+volume_db = -3.0
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="VBoxContainer/Change" to="." method="_on_change_pressed"]
 [connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Reset" to="." method="on_reset_pressed"]
