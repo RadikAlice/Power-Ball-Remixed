@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://r0c2qplxjup0"
+path="res://.godot/imported/KHMenu BoldItalic.otf-b8e7024a7f7b65e0a785e7ce0d2d1563.fontdata"
+
+[deps]
+
+source_file="res://resource/fonts/KHMenu BoldItalic.otf"
+dest_files=["res://.godot/imported/KHMenu BoldItalic.otf-b8e7024a7f7b65e0a785e7ce0d2d1563.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

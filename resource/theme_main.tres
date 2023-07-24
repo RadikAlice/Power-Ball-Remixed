@@ -1,10 +1,10 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://6aycbqsfxlik"]
 
-[ext_resource type="FontFile" uid="uid://dujycoh0awu8l" path="res://resource/fonts/CourierPrime-Bold.ttf" id="1_evcrd"]
+[ext_resource type="FontFile" uid="uid://bujmabulyn3wf" path="res://resource/fonts/KHGummi.otf" id="2_8aiku"]
 [ext_resource type="StyleBox" uid="uid://cq75r5wfbg17c" path="res://resource/box_flat.tres" id="3_x8rkv"]
 
 [resource]
-default_font = ExtResource("1_evcrd")
+default_font_size = 16
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_disabled_color = Color(1, 0, 0, 1)
 Button/colors/font_focus_color = Color(0, 0.172549, 1, 1)
@@ -12,7 +12,7 @@ Button/colors/font_hover_color = Color(0.403922, 0.427451, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0.993871, 3.85046e-07, 1)
 Button/constants/h_separation = 16
 Button/font_sizes/font_size = 32
-Button/fonts/font = ExtResource("1_evcrd")
+Button/fonts/font = ExtResource("2_8aiku")
 Button/styles/disabled = ExtResource("3_x8rkv")
 Button/styles/focus = ExtResource("3_x8rkv")
 Button/styles/hover = ExtResource("3_x8rkv")
@@ -22,4 +22,4 @@ CheckButton/colors/font_color = Color(0, 0, 0, 1)
 CheckButton/colors/font_disabled_color = Color(1, 0.0196078, 0.0196078, 1)
 CheckButton/colors/font_pressed_color = Color(0, 1, 0, 1)
 Label/font_sizes/font_size = 16
-Label/fonts/font = ExtResource("1_evcrd")
+Label/fonts/font = ExtResource("2_8aiku")

@@ -1,11 +1,52 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvwx0spejm33l"]
+[gd_scene load_steps=13 format=3 uid="uid://dvwx0spejm33l"]
 
-[ext_resource type="Script" path="res://scripts/title.gd" id="1_t3nhu"]
 [ext_resource type="AudioStream" uid="uid://dxibeg3wk8aj8" path="res://music/136638_Hippie.mp3" id="1_xroyi"]
 [ext_resource type="Texture2D" uid="uid://rjut2ivegjny" path="res://gfx/Power-Swing-ReMixed-Logo.png" id="3_1gsiw"]
 [ext_resource type="Theme" uid="uid://6aycbqsfxlik" path="res://resource/theme_main.tres" id="3_typdi"]
+[ext_resource type="PackedScene" uid="uid://bffdlbc2gmopu" path="res://scene/ui, hud/buttons/start.tscn" id="4_qfvgx"]
+[ext_resource type="PackedScene" uid="uid://dvhd7hspox1xr" path="res://scene/ui, hud/buttons/credits.tscn" id="6_nng6m"]
+[ext_resource type="PackedScene" uid="uid://cpe4sflw8sxqo" path="res://scene/ui, hud/buttons/quit.tscn" id="7_yvyp4"]
+[ext_resource type="FontFile" uid="uid://bw31l0615sag3" path="res://resource/fonts/JetBrainsMono-Medium.ttf" id="8_vl54u"]
+[ext_resource type="FontFile" uid="uid://w83vr5rq2xkh" path="res://resource/fonts/JetBrainsMono-Medium-Italic.ttf" id="9_65cvt"]
+[ext_resource type="FontFile" uid="uid://b2ohynhqolv0j" path="res://resource/fonts/JetBrainsMono-ExtraBold.ttf" id="10_e2fkj"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_vmka8"]
+[sub_resource type="Animation" id="Animation_5xdv0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InfoText:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(501, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_k8yov"]
+resource_name = "scroll_text"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InfoText:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(500, 8), Vector2(1067, 8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ombnt"]
+_data = {
+"RESET": SubResource("Animation_5xdv0"),
+"scroll_text": SubResource("Animation_k8yov")
+}
 
 [node name="title-screen" type="Control"]
 layout_mode = 3
@@ -14,19 +55,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_t3nhu")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-z_index = 2
+top_level = true
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -352.0
+offset_left = -212.0
 offset_top = -15.0
-offset_right = 355.0
+offset_right = 495.0
 offset_bottom = 339.0
 grow_horizontal = 2
+scale = Vector2(0.7, 0.7)
 
 [node name="logo" type="TextureRect" parent="CenterContainer"]
 layout_mode = 2
@@ -44,61 +85,93 @@ offset_top = -15.0
 offset_right = 1047.0
 offset_bottom = 745.0
 mouse_filter = 2
+color = Color(0, 1, 1, 1)
 
-[node name="BG2" type="ColorRect" parent="BG"]
-z_index = 1
+[node name="Menu" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = -175.0
-offset_right = 6.0
-offset_bottom = -11.0
+offset_left = 406.0
+offset_top = -421.0
+offset_right = -363.0
+offset_bottom = -211.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_typdi")
+theme_override_constants/separation = 22
+
+[node name="Start" parent="Menu" instance=ExtResource("4_qfvgx")]
+layout_mode = 2
+theme = null
+
+[node name="Options" type="MenuButton" parent="Menu"]
+layout_mode = 2
+text = "Options"
+
+[node name="PopupMenu" type="PopupMenu" parent="Menu/Options"]
+title = "Sup, options here"
+
+[node name="Credits" parent="Menu" instance=ExtResource("6_nng6m")]
+layout_mode = 2
+theme = null
+
+[node name="Quit" parent="Menu" instance=ExtResource("7_yvyp4")]
+layout_mode = 2
+theme = null
+
+[node name="InfoBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 659.0
+offset_right = 1068.0
+offset_bottom = 699.0
+
+[node name="BG-tooltip" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = -20.0
+offset_top = 650.0
+offset_right = 1046.0
+offset_bottom = 693.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
-color = Color(0, 1, 1, 1)
+color = Color(1, 1, 0.0196078, 1)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-z_index = 2
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -155.0
-offset_bottom = -119.0
-grow_horizontal = 2
-grow_vertical = 0
-alignment = 1
+[node name="BG-tooltip2" type="ColorRect" parent="BG-tooltip"]
+layout_mode = 0
+offset_left = 534.0
+offset_top = -32.0
+offset_right = 591.0
+offset_bottom = 31.0
+color = Color(1, 1, 0.0196078, 1)
 
-[node name="Start" type="Button" parent="HBoxContainer"]
+[node name="Info" type="RichTextLabel" parent="BG-tooltip/BG-tooltip2"]
 layout_mode = 2
-theme = ExtResource("3_typdi")
-text = "Start"
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 1093.0
+offset_bottom = 28.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("8_vl54u")
+theme_override_fonts/bold_font = ExtResource("9_65cvt")
+text = "Info"
+fit_content = true
 
-[node name="Options" type="MenuButton" parent="HBoxContainer"]
+[node name="InfoText" type="RichTextLabel" parent="BG-tooltip"]
 layout_mode = 2
-theme = ExtResource("3_typdi")
-button_group = SubResource("ButtonGroup_vmka8")
-text = "Options"
+offset_left = 501.0
+offset_top = 16.0
+offset_right = 1589.0
+offset_bottom = 39.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_e2fkj")
+text = "Hey, this is a test!"
+fit_content = true
 
-[node name="PopupMenu" type="PopupMenu" parent="HBoxContainer/Options"]
-title = "Sup, options here"
-visible = true
-
-[node name="Credits" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-theme = ExtResource("3_typdi")
-text = "Credits"
-
-[node name="Quit" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-theme = ExtResource("3_typdi")
-text = "Quit"
-
-[connection signal="pressed" from="HBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="HBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Scroll" type="AnimationPlayer" parent="BG-tooltip"]
+autoplay = "scroll_text"
+libraries = {
+"": SubResource("AnimationLibrary_ombnt")
+}

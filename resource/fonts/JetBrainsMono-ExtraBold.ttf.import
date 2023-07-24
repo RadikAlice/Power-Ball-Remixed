@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dhu6yhrpjm8dn"
-path="res://.godot/imported/CourierPrime-Regular.ttf-00037bce86821ad5cf161cbebb0ab797.fontdata"
+uid="uid://b2ohynhqolv0j"
+path="res://.godot/imported/JetBrainsMono-ExtraBold.ttf-62993f1fdd0c8541a7af8aaa6be666c6.fontdata"
 
 [deps]
 
-source_file="res://resource/fonts/CourierPrime-Regular.ttf"
-dest_files=["res://.godot/imported/CourierPrime-Regular.ttf-00037bce86821ad5cf161cbebb0ab797.fontdata"]
+source_file="res://resource/fonts/JetBrainsMono-ExtraBold.ttf"
+dest_files=["res://.godot/imported/JetBrainsMono-ExtraBold.ttf-62993f1fdd0c8541a7af8aaa6be666c6.fontdata"]
 
 [params]
 

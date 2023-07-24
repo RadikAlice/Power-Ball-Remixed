@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bffdlbc2gmopu"]
+
+[ext_resource type="Theme" uid="uid://6aycbqsfxlik" path="res://resource/theme_main.tres" id="1_7mqfj"]
+[ext_resource type="Script" path="res://scene/ui, hud/buttons/start.gd" id="2_fboqk"]
+
+[node name="Start" type="Button"]
+theme = ExtResource("1_7mqfj")
+text = "Start"
+script = ExtResource("2_fboqk")
+
+[connection signal="pressed" from="." to="." method="_on_start_pressed"]

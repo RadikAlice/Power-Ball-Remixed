@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvhd7hspox1xr"]
+
+[ext_resource type="Theme" uid="uid://6aycbqsfxlik" path="res://resource/theme_main.tres" id="1_apb1t"]
+[ext_resource type="Script" path="res://scene/ui, hud/buttons/credits.gd" id="2_42x13"]
+
+[node name="Credits" type="Button"]
+theme = ExtResource("1_apb1t")
+text = "Credits"
+script = ExtResource("2_42x13")
+
+[connection signal="pressed" from="." to="." method="_on_credits_pressed"]

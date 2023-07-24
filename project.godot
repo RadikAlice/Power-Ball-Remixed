@@ -20,6 +20,7 @@ config/icon="res://gfx/icon.png"
 [autoload]
 
 Transition="*res://scene/transition_scene.tscn"
+Quit_on_ESC_Key="*res://scripts/esc-quit.gd"
 
 [display]
 

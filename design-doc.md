@@ -2,7 +2,12 @@
 ---
 # Game mechanics
 ## Swing types
-- Foul
+
+- Charge
+Player gives up reaction time for guaranteed hit type
+Set ball speed according to hit type
+
+- Whiff
 Player gets hit
 Reaction time null
 Loss fx cue
@@ -43,3 +48,26 @@ Lowest reaction time, biggest fx cue
 - Slight edits with different time of day or weather
 ## Classic mode
 - Rotate between characters at random in grass stage
+---
+# Characters
+
+## Batter (Jimmy)
+- All-rounder
+
+## Batter2 (Kevin)
+- Same stats, visually different to require less accesibility changes
+
+## Martial Artist
+- Fast hits, no charge
+
+## Slugger 
+- Harder hits overall, no charge
+
+## Mr. Sun
+- Has pen in hand
+- Name and pen is a reference to D-SuN
+
+## Radika
+- Uses edited Martial Artist animations
+- Fast hits
+- Can charge
