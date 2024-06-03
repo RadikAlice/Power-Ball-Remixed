@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://dvwx0spejm33l"]
 
+[ext_resource type="Texture2D" uid="uid://rjut2ivegjny" path="res://gfx/logo.png" id="1_hsxwy"]
 [ext_resource type="AudioStream" uid="uid://dxibeg3wk8aj8" path="res://music/136638_Hippie.mp3" id="1_xroyi"]
-[ext_resource type="Texture2D" uid="uid://rjut2ivegjny" path="res://gfx/Power-Swing-ReMixed-Logo.png" id="3_1gsiw"]
 [ext_resource type="Theme" uid="uid://6aycbqsfxlik" path="res://resource/theme_main.tres" id="3_typdi"]
 [ext_resource type="PackedScene" uid="uid://bffdlbc2gmopu" path="res://scene/ui, hud/buttons/start.tscn" id="4_qfvgx"]
 [ext_resource type="PackedScene" uid="uid://dvhd7hspox1xr" path="res://scene/ui, hud/buttons/credits.tscn" id="6_nng6m"]
@@ -71,12 +71,13 @@ scale = Vector2(0.7, 0.7)
 
 [node name="logo" type="TextureRect" parent="CenterContainer"]
 layout_mode = 2
-texture = ExtResource("3_1gsiw")
+texture = ExtResource("1_hsxwy")
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_xroyi")
 volume_db = -8.0
 autoplay = true
+bus = &"Music"
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 0

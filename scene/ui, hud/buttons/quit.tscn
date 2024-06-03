@@ -8,4 +8,4 @@ theme = ExtResource("1_7ru1j")
 text = "Quit"
 script = ExtResource("2_r4xuu")
 
-[connection signal="pressed" from="." to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

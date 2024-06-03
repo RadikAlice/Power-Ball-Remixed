@@ -3,6 +3,10 @@
 # Game mechanics
 ## Swing types
 
+- Bunt
+Player hits ball upwards for a better second hit
+Set ball speed to 0 on X axis, 30 on Y with timer for fall
+
 - Charge
 Player gives up reaction time for guaranteed hit type
 Set ball speed according to hit type
@@ -27,6 +31,18 @@ Low reaction time, big fx cue
 - Atomic
 Set ball speed to maximum
 Lowest reaction time, biggest fx cue
+
+# Swing selection
+Sets selected character to a swing style
+
+- Dynamic
+Average, can bunt and charge
+
+- Time-based
+Stronger, time-based hits only, no bunt or charge
+
+-Slugger
+- Strongest, slowest hits, no Time-based hits or bunt
 
 ---
 # Stages and hazards
@@ -60,7 +76,7 @@ Lowest reaction time, biggest fx cue
 ## Martial Artist
 - Fast hits, no charge
 
-## Slugger 
+## Hooligan
 - Harder hits overall, no charge
 
 ## Mr. Sun

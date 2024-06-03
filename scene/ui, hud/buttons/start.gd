@@ -1,5 +1,5 @@
 extends Button
 
 # Start game
-func _on_start_pressed():
-	Transition.No1("res://scene/debug/test-lvl.tscn")
+func _on_pressed():
+	transition.fade("res://scene/debug/test.tscn")

@@ -12,7 +12,7 @@ func _on_stop_pressed():
 func _on_change_pressed():
 	$VBoxContainer/bgm.get_stream_playback()
 
-# Go to title scene
+# Go back to title screen
 func _on_back_pressed():
 	Transition.No1("res://scene/title.tscn")
 

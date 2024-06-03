@@ -8,4 +8,4 @@ theme = ExtResource("1_apb1t")
 text = "Credits"
 script = ExtResource("2_42x13")
 
-[connection signal="pressed" from="." to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhkbtvggcpuop"]
+[gd_scene load_steps=5 format=3 uid="uid://bidh5lnjxo88q"]
 
-[ext_resource type="Script" path="res://scripts/debug-scr.gd" id="1_gflhp"]
-[ext_resource type="Theme" uid="uid://6aycbqsfxlik" path="res://resource/theme_main.tres" id="2_ns8h3"]
-[ext_resource type="AudioStream" uid="uid://dw0uv1puv3g6p" path="res://music/105753_Heaven_remix.mp3" id="2_o1hw0"]
+[ext_resource type="Script" path="res://scene/lvl/debug.gd" id="1_2aiwe"]
+[ext_resource type="Theme" uid="uid://6aycbqsfxlik" path="res://resource/theme_main.tres" id="2_s15bq"]
+[ext_resource type="AudioStream" uid="uid://dw0uv1puv3g6p" path="res://music/105753_Heaven_remix.mp3" id="3_w3v0i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_23bic"]
 size = Vector2(41.5687, 5.43095)
 
 [node name="test-lvl" type="Node2D"]
-script = ExtResource("1_gflhp")
+script = ExtResource("1_2aiwe")
 
 [node name="bg" type="ColorRect" parent="."]
 offset_left = -12.0
@@ -43,7 +43,7 @@ offset_bottom = 192.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme = ExtResource("2_ns8h3")
+theme = ExtResource("2_s15bq")
 alignment = 1
 
 [node name="Play" type="Button" parent="VBoxContainer"]
@@ -70,8 +70,16 @@ text = "Exit"
 layout_mode = 2
 text = "Reset"
 
+[node name="VolUp" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Volume Up"
+
+[node name="VolDown" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Volume Down"
+
 [node name="bgm" type="AudioStreamPlayer" parent="VBoxContainer"]
-stream = ExtResource("2_o1hw0")
+stream = ExtResource("3_w3v0i")
 volume_db = -3.0
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]

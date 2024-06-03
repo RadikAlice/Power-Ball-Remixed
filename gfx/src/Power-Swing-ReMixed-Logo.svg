@@ -7,11 +7,11 @@
    viewBox="0 0 740.83332 370.4188"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="Power-Swing-ReMixed-Logo.svg"
-   inkscape:export-filename="..\Power-Swing-ReMixed-Logo.png"
-   inkscape:export-xdpi="24.25"
-   inkscape:export-ydpi="24.25"
+   inkscape:export-filename="..\logo.png"
+   inkscape:export-xdpi="24.24"
+   inkscape:export-ydpi="24.24"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -34,8 +34,9 @@
      showgrid="false"
      inkscape:zoom="0.17172067"
      inkscape:cx="1254.945"
-     inkscape:cy="-372.69829"
-     inkscape:current-layer="layer2" />
+     inkscape:cy="-369.78658"
+     inkscape:current-layer="layer1"
+     inkscape:export-bgcolor="#00ff7500" />
   <defs
      id="defs2">
     <inkscape:path-effect
@@ -149,7 +150,8 @@
        transform="matrix(0.20900523,0,0,0.20900523,110.08853,76.55621)"
        inkscape:export-filename="..\cursor.png"
        inkscape:export-xdpi="24.25"
-       inkscape:export-ydpi="24.25">
+       inkscape:export-ydpi="24.25"
+       style="display:none">
       <path
          style="font-weight:bold;font-size:38.1px;line-height:1.25;font-family:'IM FELL THREE LINE PICA';-inkscape-font-specification:'IM FELL THREE LINE PICA Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#ffe6d5;fill-opacity:1;stroke:#000000;stroke-width:2.01844;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          d="m 184.56001,145.37936 c 2.47143,-46.611123 -3.73597,-55.4592 -3.73597,-55.4592 l 0.0318,-86.0584922 c 0,0 10.78656,-12.1451799 19.03813,0 l 1.78728,85.4296792 c 0,0 -5.46028,9.17686 -6.54978,56.025113 z"
@@ -179,18 +181,18 @@
      transform="translate(-17.019903,-22.757041)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:71.2574px;line-height:1.25;font-family:'RT DIY-Tape';-inkscape-font-specification:'RT DIY-Tape Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.494843"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:71.2574px;line-height:1.25;font-family:'RT DIY-Tape';-inkscape-font-specification:'RT DIY-Tape Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:1.50019611;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-dasharray:none;stroke-linecap:butt;paint-order:normal"
        x="387.68399"
        y="259.41678"
        id="text196"><tspan
          sodipodi:role="line"
          id="tspan194"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:120.742px;font-family:'Inversionz Unboxed';-inkscape-font-specification:'Inversionz Unboxed';text-align:center;letter-spacing:-7.05151px;text-anchor:middle;stroke-width:0.494843"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:120.742px;font-family:'Inversionz Unboxed';-inkscape-font-specification:'Inversionz Unboxed';text-align:center;letter-spacing:-7.05151px;text-anchor:middle;stroke-width:1.50019611;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-dasharray:none;stroke-linecap:butt;paint-order:normal"
          x="387.68399"
          y="259.41678"
          dy="29.924381 0 0 0 0 0 0 0 0">POWER SWING</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:59.3812px;font-family:'RT DIY-Tape';-inkscape-font-specification:'RT DIY-Tape Bold';text-align:center;text-anchor:middle;stroke-width:0.494843"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:59.3812px;font-family:'RT DIY-Tape';-inkscape-font-specification:'RT DIY-Tape Bold';text-align:center;text-anchor:middle;stroke-width:1.50019611;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-dasharray:none;stroke-linecap:butt;paint-order:normal"
          x="387.68399"
          y="354.62332"
          id="tspan252">REMIXED</tspan></text>
